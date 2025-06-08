@@ -294,6 +294,30 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 100px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .heroContainer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .heroContent {
+    width: 100%;
+  }
+
+  .heroVisual {
+    height: auto;
+    width: 100%;
+  }
+
   .visualGrid {
     display: flex;
     flex-direction: column;
@@ -302,8 +326,15 @@
   }
 
   .visualItem {
-    width: 450px;
+    width: 100%;
+    max-width: 350px;
     height: 180px;
+  }
+
+  .visualItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .visualItem1,
@@ -313,18 +344,8 @@
     animation: none;
   }
 
-  .heroContainer {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
-  }
-
-  .heroCta{
+  .heroCta {
     margin: 0 auto;
-  }
-
-  .heroVisual {
-    height: auto;
   }
 
   .floatingStats,

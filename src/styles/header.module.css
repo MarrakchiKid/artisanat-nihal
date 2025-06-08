@@ -1,57 +1,103 @@
-.header {
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.navcontainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 1.5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
-  
-.siteName {
-    font-weight: bolder;
-    font-size: 1.5rem;
-    color: #5f574f;
-    font-style: italic;
-}
-  
-.nav {
-    display: flex;
-    gap: 1.5rem;
-}
-  
-.nav a {
-    color: #5f574f;
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--black);
     text-decoration: none;
-    font-weight: 500;
+    letter-spacing: -0.02em;
 }
-  
-.burger {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
+
+.navlinks {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    align-items: center;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: var(--gray-700);
+    font-weight: 400;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+    letter-spacing: -0.01em;
+}
+
+.navlinks a:hover {
+    color: var(--black);
+}
+
+.navcta {
+    background: var(--black);
+    color: var(--white) !important;
+    padding: 0.75rem 1.5rem;
     border: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    border-radius: 20px;
 }
-  
+
+.navcta:hover {
+    background: var(--gray-800);
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--black);
+}
+
 @media (max-width: 768px) {
-    .nav {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 70px;
-      right: 0;
-      background-color: #fef6e4;
-      padding: 1rem;
-      border-left: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-    }
-  
-    .nav.open {
-      display: flex;
-    }
-  
-    .burger {
-      display: block;
-    }
+  .menuToggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .navlinks {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .showMenu {
+    display: flex;
+  }
+
+  .navcta {
+    width: 100%;
+    text-align: center;
+  }
 }
-  

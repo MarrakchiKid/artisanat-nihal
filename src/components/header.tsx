@@ -1,33 +1,33 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import styles from '../styles/header.module.css'
 import { useState } from 'react'
+import { HiMenu, HiX } from 'react-icons/hi'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className={styles.header}>
-      <div>
-        <span className={styles.siteName}>Artisanat Marocain</span>
+    <nav className={styles.navbar}>
+      <div className={styles.navcontainer}>
+        <a href="/" className={styles.logo} id="logo-text">Artisanat Nihal</a>
+
+        <button
+          className={styles.menuToggle}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+        </button>
+
+        <ul className={`${styles.navlinks} ${menuOpen ? styles.showMenu : ''}`}>
+          <li><Link href="/catalogue">Catalogue</Link></li>
+          <li><Link href="/about">À propos</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="#cta" className={styles.navcta}>Demander un devis</Link></li>
+        </ul>
       </div>
-
-      <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
-        <Link href="/">Accueil</Link>
-        <Link href="/produits">Catalogue</Link>
-        <Link href="/propos">À propos</Link>
-        <Link href="/contact">Contact</Link>
-      </nav>
-
-      <button
-        className={styles.burger}
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Ouvrir le menu"
-      >
-        ☰
-      </button>
-    </header>
+    </nav>
   )
 }

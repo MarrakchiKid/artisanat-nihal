@@ -1,0 +1,121 @@
+.servicesSection {
+  background: var(--white);
+}
+
+.servicesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.servicesHeader {
+  text-align: center;
+  margin-bottom: 6rem;
+  animation: slideInUp 1s ease 0.2s both;
+}
+
+.sectionEyebrow {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--black);
+  margin: 1rem 0;
+}
+
+.sectionSubtitle {
+  color: var(--gray-600);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.serviceItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--gray-200);
+  cursor: pointer;
+  opacity: 0;
+  animation: slideInLeft 0.8s ease forwards;
+  transition: padding 0.4s ease, background 0.6s ease;
+
+}
+
+.serviceItem:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.serviceItem:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.serviceItem:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.serviceItem:last-child {
+  border-bottom: none;
+}
+
+.serviceItem:hover {
+  padding-left: 2rem;
+  background: linear-gradient(90deg, transparent, var(--gray-100), transparent);
+}
+
+.serviceNumber {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-400);
+  min-width: 60px;
+  transition: color 0.3s ease;
+}
+
+.serviceItem:hover .serviceNumber {
+  color: var(--black);
+}
+
+.serviceContent {
+  min-width: 0;
+}
+
+.serviceTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.serviceDescription {
+  font-size: 1rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

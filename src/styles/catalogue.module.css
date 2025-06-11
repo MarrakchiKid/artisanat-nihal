@@ -1,0 +1,117 @@
+.hero {
+  text-align: center;
+  padding: 7rem 0 6rem;
+  border-bottom: 1px solid var(--gray-200);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionEyebrow {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0.2em;
+  left: 0;
+  width: 100%;
+  height: 0.3em;
+  background: linear-gradient(90deg, var(--gray-300), var(--gray-200));
+  z-index: -1;
+  animation: highlightExpand 1s ease 0.8s both;
+}
+
+@keyframes highlightExpand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.heroCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  letter-spacing: -0.01em;
+}
+
+.heroCta:hover {
+  background: var(--gray-800);
+  transform: translateY(-2px);
+}
+
+.filters {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.filterBtn {
+  padding: 0.75rem 1.5rem;
+  background: var(--gray-100);
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.filterBtn:hover {
+  background: var(--gray-200);
+}
+
+.filterBtn.active {
+  background: var(--black);
+  color: var(--white);
+}

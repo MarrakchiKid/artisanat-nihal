@@ -1,0 +1,111 @@
+.ctaSection {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: slideInUp 1s ease 0.2s both;
+}
+
+.ctaEyebrow {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray-300);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.ctaTitle {
+  color: var(--white);
+  margin-bottom: 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.ctaDesc {
+  font-size: 1.125rem;
+  color: var(--gray-300);
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--white);
+  color: var(--black);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gray-100);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  border-radius: 50px;
+  z-index: 0;
+}
+
+.ctaButton:hover::before {
+  transform: scale(1);
+}
+
+.ctaButton span {
+  position: relative;
+  z-index: 1;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Optional slideInUp animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .ctaButton {
+    padding: 0.9rem 1.6rem;
+    font-size: 0.85rem;
+  }
+
+  .ctaDesc {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+}

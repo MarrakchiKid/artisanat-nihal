@@ -115,3 +115,10 @@
   background: var(--black);
   color: var(--white);
 }
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin-top: 4rem;
+}

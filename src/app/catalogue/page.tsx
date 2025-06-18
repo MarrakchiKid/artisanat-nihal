@@ -3,9 +3,31 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import styles from "@/styles/catalogue.module.css"
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
+import ProductCard from "./_components/productCard";
+
+type Product = {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  image: string;
+  imageLabel: string;
+  price: number;
+  material: string;
+  dimensions: string;
+};
+
 
 export default function CataloguePage() {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    fetch("/api/products")
+      .then(res => res.json())
+      .then(data => setProducts(data));
+  }, []);
+  
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [
@@ -57,6 +79,15 @@ export default function CataloguePage() {
           </div>
         </div>
       </section>
+
+      <section className={styles.productsSection}>
+        <div className={styles.grid}>
+          {products.map((prod) => (
+            <ProductCard key={prod.id} {...prod} />
+          ))}
+        </div>
+      </section>
+
       <Footer />
     </>
   );

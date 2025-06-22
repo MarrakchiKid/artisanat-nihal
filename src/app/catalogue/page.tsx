@@ -80,7 +80,7 @@ export default function CataloguePage() {
         </div>
       </section>
 
-      <section className={styles.productsSection}>
+      <section className={styles.productsGrid}>
         <div className={styles.grid}>
           {products.map((prod) => (
             <ProductCard key={prod.id} {...prod} />

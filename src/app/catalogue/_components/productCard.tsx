@@ -1,4 +1,5 @@
 import styles from "@/styles/productCard.module.css";
+import Image from "next/image";
 
 type ProductProps = {
   title: string;
@@ -16,7 +17,14 @@ export default function ProductCard(props: ProductProps) {
   return (
     <div className={styles.card} data-category={props.category}>
       <div className={styles.image}>
-        <div className={styles.imageLabel}>{props.imageLabel}</div>
+        <Image
+          src={props.imageLabel}
+          alt={props.imageLabel || props.title}
+          width={350}
+          height={220}
+          className={styles.imageContent}
+          style={{ objectFit: "cover" }}
+        />
         {props.badge && <div className={styles.badge}>{props.badge}</div>}
       </div>
       <div className={styles.info}>

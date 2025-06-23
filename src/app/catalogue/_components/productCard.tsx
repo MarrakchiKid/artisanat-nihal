@@ -2,6 +2,7 @@ import styles from "@/styles/productCard.module.css";
 import Image from "next/image";
 
 type ProductProps = {
+  id: number;
   title: string;
   category: string;
   description: string;
@@ -37,7 +38,7 @@ export default function ProductCard(props: ProductProps) {
           {props.finish && <div><strong>Finition:</strong> {props.finish}</div>}
           {props.duration && <div><strong>Temps:</strong> {props.duration}</div>}
         </div>
-        <a href="#" className={styles.cta}>Demander un devis →</a>
+        <a href={`/catalogue/${props.id}`} className={styles.cta}>Demander un devis →</a>
       </div>
     </div>
   );

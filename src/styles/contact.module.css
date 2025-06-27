@@ -229,6 +229,7 @@
   overflow: hidden;
   cursor: pointer;
   align-self: flex-start;
+  margin: 0 auto;
 }
 
 .submitButton::before {
@@ -343,12 +344,13 @@
   .infoItem {
     max-width: 350px;
     justify-content: center;
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .contactSection {
-    padding: 5rem 1rem 2rem;
+    padding: 6.5rem 1rem 2rem;
   }
 
   .contactTitle {

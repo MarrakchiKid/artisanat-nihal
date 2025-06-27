@@ -4,7 +4,6 @@
   align-items: center;
   position: relative;
   padding: 8rem 2rem 4rem;
-  background: var(--gray-100);
 }
 
 .contactContainer {
@@ -271,7 +270,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Animations */
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -314,7 +312,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .contactSection {
     padding: 6rem 1rem 3rem;

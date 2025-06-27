@@ -1,0 +1,214 @@
+.aboutSection {
+  color: #111;
+  padding: 8rem 2rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.aboutSection::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.02), transparent 70%);
+  z-index: 0;
+}
+
+.aboutContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.badge {
+  display: inline-block;
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.badge::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 2px;
+  background: var(--gray-400);
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.15em;
+  width: 100%;
+  height: 0.2em;
+  background: linear-gradient(90deg, var(--gray-300), var(--gray-200));
+  z-index: -1;
+  animation: highlightExpand 1s ease 0.8s both;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #444;
+  max-width: 700px;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.sectionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeInUp 1s ease both;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000;
+  font-family: 'Playfair Display', serif;
+}
+
+.sectionBlock p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+  animation: fadeInUp 1.2s ease both;
+}
+
+.valueItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.valueItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  color: #111;
+}
+
+.valueItem h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.valueItem p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.closingText p {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+  animation: fadeInUp 1.4s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 5rem 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes highlightExpand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .sectionBlock p,
+  .subtitle,
+  .closingText p {
+    font-size: 1rem;
+  }
+
+  .valueItem {
+    padding: 1.25rem;
+  }
+}

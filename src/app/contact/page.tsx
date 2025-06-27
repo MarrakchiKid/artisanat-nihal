@@ -16,7 +16,6 @@ export default function ContactPage() {
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Animation de succès
     setFormData({ name: '', email: '', message: '' });
   };
 

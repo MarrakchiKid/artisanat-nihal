@@ -18,4 +18,5 @@ model Product {
   duration    String?
   badge       String?
   imageLabel  String
+  images      String[] @default([])
 }

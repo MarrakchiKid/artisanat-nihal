@@ -93,6 +93,19 @@
   color: var(--white);
 }
 
+.imageGallery {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.thumbnail {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
 @media (max-width: 1024px) {
   .productDetail {
     flex-direction: column;

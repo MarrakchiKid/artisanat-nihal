@@ -11,11 +11,13 @@ type Product = {
   title: string;
   description: string;
   category: string;
-  image: string;
   imageLabel: string;
-  price: number;
   material: string;
   dimensions: string;
+  finish?: string;
+  duration?: string;
+  badge?: string;
+  images?: string[];
 };
 
 

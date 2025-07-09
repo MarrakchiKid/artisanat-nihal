@@ -25,11 +25,27 @@ export default async function ProductPage(
           <section className={styles.productDetail}>
             <div className={styles.productImages}>
               <Image
-                src={product.imageLabel}
+                src={product.images?.[0] || product.imageLabel}
                 alt={product.title}
                 width={600}
                 height={600}
-                className={styles.mainImage} />
+                className={styles.mainImage}
+              />
+
+              {product.images && product.images.length > 1 && (
+                <div className={styles.imageGallery}>
+                  {product.images.map((img, index) => (
+                    <Image
+                      key={index}
+                      src={img}
+                      alt={`Vue ${index + 1}`}
+                      width={100}
+                      height={100}
+                      className={styles.thumbnail}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className={styles.productInfo}>

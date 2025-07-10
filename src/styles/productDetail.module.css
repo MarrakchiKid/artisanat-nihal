@@ -183,6 +183,124 @@
   object-fit: cover;
 }
 
+.storySection,
+.partnersSection,
+.bulkSection,
+.valuesSection {
+  padding: 5rem 0;
+  text-align: center;
+  border-top: 1px solid #e0e0e0 ;
+}
+
+.storySection h2,
+.partnersSection h2,
+.bulkSection h2,
+.valuesSection h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.storySection h2::after,
+.partnersSection h2::after,
+.bulkSection h2::after,
+.valuesSection h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #c4704b;
+  margin: 0.8rem auto 0;
+}
+
+.storySection p,
+.partnersSection p,
+.bulkSection p {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.partnerLogos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  margin-top: 3.5rem;
+  padding: 0 2rem;
+}
+
+.partnerLogos img {
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.partnerLogos img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.bulkCta {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 1rem 2.5rem;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bulkCta:hover {
+  background: #c4704b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.valuesSection ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.valuesSection li {
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  padding-left: 3rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.valuesSection li::before {
+  content: '✓';
+  font-size: 1.6rem;
+  color: #c4704b;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
 @media (max-width: 1024px) {
   .productDetail {
     flex-direction: column;
@@ -232,7 +350,7 @@
   .mainImageWrapper {
     width: 100%;
     height: auto;
-    aspect-ratio: 1 / 1; /* carré sur mobile */
+    aspect-ratio: 1 / 1;
   }
 
   .mainImage {

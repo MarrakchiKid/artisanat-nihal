@@ -3,6 +3,7 @@ import styles from '@/styles/productDetail.module.css'
 import { prisma } from '../../../../lib/prisma'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import ImageCarousel from '../_components/imageCarousel'
 
 export default async function ProductPage(
   props: { params: Promise<{ id: string }> }
@@ -24,29 +25,14 @@ export default async function ProductPage(
         <div className={styles.container}>
           <section className={styles.productDetail}>
             <div className={styles.productImages}>
-              <Image
-                src={product.images?.[0] || product.imageLabel}
-                alt={product.title}
-                width={600}
-                height={600}
-                className={styles.mainImage}
+              <ImageCarousel
+                images={product.images && product.images.length > 0
+                  ? product.images
+                  : [product.imageLabel]}
+                title={product.title}
               />
-
-              {product.images && product.images.length > 1 && (
-                <div className={styles.imageGallery}>
-                  {product.images.map((img, index) => (
-                    <Image
-                      key={index}
-                      src={img}
-                      alt={`Vue ${index + 1}`}
-                      width={100}
-                      height={100}
-                      className={styles.thumbnail}
-                    />
-                  ))}
-                </div>
-              )}
             </div>
+
 
             <div className={styles.productInfo}>
               <div className={styles.productCategory}>{product.category}</div>
@@ -72,7 +58,7 @@ export default async function ProductPage(
                 </div>
               </div>
 
-              <a href="#contact" className={styles.productCta}>Demander un devis →</a>
+              <a href="/contact" className={styles.productCta}>Demander un devis →</a>
             </div>
           </section>
         </div>

@@ -25,7 +25,7 @@ export default function Header() {
           <li><Link href="/catalogue">Catalogue</Link></li>
           <li><Link href="/about">À propos</Link></li>
           <li><Link href="/contact">Contact</Link></li>
-          <li><Link href="#cta" className={styles.navcta}>Demander un devis</Link></li>
+          <li><Link href="/contact" className={styles.navcta}>Demander un devis</Link></li>
         </ul>
       </div>
     </nav>

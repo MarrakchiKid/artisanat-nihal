@@ -68,7 +68,7 @@ export default function ProductCard(props: ProductProps) {
         </div>
 
         <a href={`/catalogue/${props.id}`} className={styles.cta}>
-          Demander un devis →
+          En savoir plus →
         </a>
       </div>
     </div>

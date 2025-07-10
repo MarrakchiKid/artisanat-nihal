@@ -14,7 +14,7 @@ export default function WorkSection() {
     <section id="work" className={styles.work}>
       <div className={styles.workContainer}>
         <div className={styles.workHeader}>
-          <span className="section-eyebrow">Notre Expertise</span>
+          <span className={styles.workEyebrow}>Notre Expertise</span>
           <h2 className={styles.workTitle}>Nos Créations</h2>
           <p className={styles.workSubtitle}>Chaque pièce raconte une histoire, celle d&apos;un savoir-faire transmis de génération en génération.</p>
         </div>

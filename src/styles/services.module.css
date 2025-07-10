@@ -10,16 +10,20 @@
 
 .servicesHeader {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   animation: slideInUp 1s ease 0.2s both;
 }
 
 .sectionEyebrow {
+  display: inline-block;
   font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--gray-500);
+  font-weight: 500;
+  color: var(--gray-600);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
 }
 
 .sectionTitle {

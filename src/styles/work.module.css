@@ -15,6 +15,18 @@
   animation: slideInUp 1s ease 0.2s both;
 }
 
+.workEyebrow{
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
 .workTitle {
   font: 700 clamp(2.5rem, 5vw, 4rem) / 1.1 'Playfair Display', serif;
   color: var(--black);

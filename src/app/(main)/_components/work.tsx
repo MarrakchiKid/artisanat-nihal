@@ -16,22 +16,19 @@ export default function WorkSection() {
         <div className={styles.workHeader}>
           <span className="section-eyebrow">Notre Expertise</span>
           <h2 className={styles.workTitle}>Nos Créations</h2>
-          <p className={styles.workSubtitle}>
-            Chaque pièce raconte une histoire, celle d&apos;un savoir-faire transmis de génération en génération.
-          </p>
+          <p className={styles.workSubtitle}>Chaque pièce raconte une histoire, celle d&apos;un savoir-faire transmis de génération en génération.</p>
+        </div>
+        
+        <div className={styles.carouselWrapper}>
+          <div className={styles.carouselTrack}>
+            {[...workItems, ...workItems].map((item, index) => (
+              <div key={index} className={styles.carouselItem} style={{ backgroundImage: `url(${item.image})` }}>
+                <span>{item.title}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className={styles.workGrid}>
-          {workItems.map((item, index) => (
-            <div
-              key={index}
-              className={styles.workItem}
-              style={{ backgroundImage: `url(${item.image})` }}
-            >
-              <span>{item.title}</span>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

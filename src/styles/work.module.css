@@ -1,5 +1,6 @@
 .work {
   padding: 8rem 0;
+  overflow: hidden;
 }
 
 .workContainer {
@@ -10,15 +11,12 @@
 
 .workHeader {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   animation: slideInUp 1s ease 0.2s both;
 }
 
 .workTitle {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  line-height: 1.1;
+  font: 700 clamp(2.5rem, 5vw, 4rem) / 1.1 'Playfair Display', serif;
   color: var(--black);
   margin-bottom: 2rem;
   letter-spacing: -0.02em;
@@ -32,35 +30,43 @@
   line-height: 1.7;
 }
 
-.workGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  border-radius: 20px;
+.carouselWrapper {
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  animation: slideInUp 1s ease 0.4s both;
+  padding: 2rem 0;
 }
 
-.workItem {
-  aspect-ratio: 1;
+.carouselTrack {
+  display: flex;
+  width: max-content;
+  animation: scrollInfinite 40s linear infinite;
+}
+
+.carouselTrack:hover {
+  animation-play-state: paused;
+}
+
+.carouselItem {
+  flex-shrink: 0;
+  width: 350px;
+  height: 350px;
+  margin: 0 1rem;
+  border-radius: 12px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font: 500 1.5rem 'Space Grotesk', sans-serif;
   color: var(--white);
   position: relative;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.workItem::before {
+.carouselItem::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -69,81 +75,61 @@
   transition: all 0.5s ease;
 }
 
-.workItem span {
+.carouselItem span {
   position: relative;
   z-index: 2;
   text-align: center;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.workItem:hover {
-  transform: scale(1.05);
-  z-index: 10;
+.carouselItem:hover {
+  transform: scale(1.03);
+  z-index: 3;
 }
 
-.workItem:hover::before {
-  background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, transparent 50%, rgba(0,0,0,0.1) 100%);
+.carouselItem:hover::before {
+  background: linear-gradient(135deg, rgba(0,0,0,0.05) 0%, transparent 50%, rgba(0,0,0,0.05) 100%);
 }
 
-.workItem:hover span {
-  transform: scale(1.1);
+.carouselItem:hover span {
+  transform: scale(1.08);
+}
+
+@keyframes scrollInfinite {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 2rem)); }
 }
 
 @keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
-  .work {
-    padding: 5rem 0;
-  }
+  .work { padding: 5rem 0; }
+  .workHeader { margin-bottom: 3rem; }
+  .workTitle { font-size: clamp(2rem, 6vw, 3rem); }
+  .workSubtitle { font-size: 1rem; padding: 0 1rem; }
 
-  .workGrid {
-    grid-template-columns: 1fr;
-    border-radius: 12px;
+  .carouselItem {
+    width: 280px;
+    height: 280px;
+    margin: 0 0.8rem;
   }
-
-  .workItem {
-    aspect-ratio: 16 / 9;
-    font-size: 1.25rem;
-  }
-
-  .workHeader {
-    margin-bottom: 4rem;
-  }
-
-  .workTitle {
-    font-size: clamp(2rem, 6vw, 3rem);
-  }
-
-  .workSubtitle {
-    font-size: 1rem;
-    padding: 0 1rem;
+  @keyframes scrollInfinite {
+    to { transform: translateX(calc(-50% - 1.6rem)); }
   }
 }
 
 @media (max-width: 480px) {
-  .work {
-    padding: 4rem 0;
+  .work { padding: 4rem 0; }
+  .carouselItem {
+    width: 240px;
+    height: 240px;
+    margin: 0 0.6rem;
+    font-size: 1.2rem;
   }
-
-  .workItem {
-    aspect-ratio: 4 / 3;
-    font-size: 1.1rem;
-  }
-
-  .workTitle {
-    font-size: 2rem;
-  }
-
-  .workSubtitle {
-    font-size: 0.95rem;
+  @keyframes scrollInfinite {
+    to { transform: translateX(calc(-50% - 1.2rem)); }
   }
 }

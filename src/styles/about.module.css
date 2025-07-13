@@ -1,7 +1,9 @@
 .about {
   position: relative;
   overflow: hidden;
+  padding-top: clamp(30px, 7vw, 80px);
 }
+
 .about::before {
   content: "";
   position: absolute;

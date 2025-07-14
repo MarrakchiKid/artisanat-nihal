@@ -18,9 +18,8 @@ export default function HeroSection() {
             façonnées selon des techniques séculaires transmises de génération en génération.
           </p>
           <div className={styles.heroActions}>
-            <a href="#work" className={styles.heroCta}>
+            <a href="/catalogue" className={styles.heroCta}>
               <span>Voir nos créations</span>
-              <span>→</span>
             </a>
           </div>
         </div>

@@ -12,7 +12,6 @@ export default function CtaSection() {
           </p>
           <a href="#contact" className={styles.ctaButton}>
             <span>Demander un devis</span>
-            <span>→</span>
           </a>
         </div>
       </div>

@@ -11,7 +11,7 @@ export default function ServicesSection() {
           <span className={styles.sectionEyebrow}>De la Matière à l’Œuvre</span>
           <h2 className={styles.sectionTitle}>Notre Savoir-faire</h2>
           <p className={styles.sectionSubtitle}>
-            Un processus artisanal méticuleux pour des créations d'exception
+            Chaque création incarne un art de vivre, façonnée à la main avec une exigence constante de qualité et d’authenticité.
           </p>
         </div>
 
@@ -19,9 +19,9 @@ export default function ServicesSection() {
           <div className={styles.serviceItem}>
             <div className={styles.serviceNumber}>01</div>
             <div className={styles.serviceContent}>
-              <h3 className={styles.serviceTitle}>Sélection des Matières</h3>
+              <h3 className={styles.serviceTitle}>Matières d’Exception</h3>
               <p className={styles.serviceDescription}>
-                Choix rigoureux des cuirs les plus fins et des fibres naturelles de première qualité.
+                Nos artisans sélectionnent les cuirs les plus souples et les tissus les plus nobles, alliant esthétique, toucher et longévité.
               </p>
             </div>
           </div>
@@ -29,9 +29,9 @@ export default function ServicesSection() {
           <div className={styles.serviceItem}>
             <div className={styles.serviceNumber}>02</div>
             <div className={styles.serviceContent}>
-              <h3 className={styles.serviceTitle}>Techniques Traditionnelles</h3>
+              <h3 className={styles.serviceTitle}>Gestes Hérités</h3>
               <p className={styles.serviceDescription}>
-                Application des méthodes ancestrales transmises de maître à apprenti.
+                Chaque étape de fabrication repose sur un savoir-faire ancestral transmis de génération en génération, sans compromis.
               </p>
             </div>
           </div>
@@ -39,15 +39,16 @@ export default function ServicesSection() {
           <div className={styles.serviceItem}>
             <div className={styles.serviceNumber}>03</div>
             <div className={styles.serviceContent}>
-              <h3 className={styles.serviceTitle}>Finitions Artisanales</h3>
+              <h3 className={styles.serviceTitle}>Finitions Signature</h3>
               <p className={styles.serviceDescription}>
-                Attention méticuleuse portée à chaque détail pour une finition parfaite.
+                Coutures apparentes, patines naturelles ou tranches cirées : chaque finition reflète notre souci du détail et du beau.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
   );
 }
 

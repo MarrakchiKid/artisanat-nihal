@@ -5,6 +5,7 @@ import AboutSection from "./_components/about";
 import ServicesSection from "./_components/services";
 import Footer from "@/components/footer";
 import CtaSection from "./_components/cta";
+import CollaborationsSection from "./_components/collab";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutSection />
       <WorkSection />
       <ServicesSection />
+      <CollaborationsSection />
       <CtaSection />
       <Footer />
     </>

@@ -1,0 +1,58 @@
+.prestigeSection {
+  padding: 6rem 2rem;
+  background: var(--white);
+  text-align: center;
+}
+
+.prestigeSection .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionEyebrow {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.sectionTitle {
+  font: 700 clamp(2.5rem, 5vw, 4rem) / 1.1 'Playfair Display', serif;
+  color: var(--black);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubtitle {
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+}
+
+.partnerGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.partnerGrid img {
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  max-height: 160px;
+}
+
+.partnerGrid img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}

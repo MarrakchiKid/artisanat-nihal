@@ -15,10 +15,12 @@
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--gray-600);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 2px;
   margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
 }
 
 .heroTitle {

@@ -61,7 +61,6 @@ export default function CataloguePage() {
           </p>
           <a href="#produits" className={styles.heroCta}>
             <span>Parcourir nos créations</span>
-            <span>→</span>
           </a>
         </div>
       </section>

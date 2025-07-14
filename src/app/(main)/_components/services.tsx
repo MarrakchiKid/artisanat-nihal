@@ -8,7 +8,7 @@ export default function ServicesSection() {
     <section className={styles.servicesSection}>
       <div className={styles.servicesContainer}>
         <div className={styles.servicesHeader}>
-          <span className={styles.sectionEyebrow}>Notre Processus</span>
+          <span className={styles.sectionEyebrow}>De la Matière à l’Œuvre</span>
           <h2 className={styles.sectionTitle}>Notre Savoir-faire</h2>
           <p className={styles.sectionSubtitle}>
             Un processus artisanal méticuleux pour des créations d'exception

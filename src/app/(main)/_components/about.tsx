@@ -8,7 +8,7 @@ const AboutSection = () => {
     <section id="about" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.aboutHeader}>
-          <span className={styles.aboutEyebrow}>Notre Héritage</span>
+          <span className={styles.aboutEyebrow}>Une Tradition Familiale</span>
           <h2 className={styles.aboutTitle}>Notre Histoire</h2>
         </div>
         <div className={styles.aboutGrid}>

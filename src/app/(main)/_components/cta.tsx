@@ -5,7 +5,7 @@ export default function CtaSection() {
     <section id="cta" className={styles.ctaSection}>
       <div className={styles.container}>
         <div className={styles.ctaContent}>
-          <span className={styles.ctaEyebrow}>Votre Projet</span>
+          <span className={styles.ctaEyebrow}>Une Idée, un Dialogue</span>
           <h2 className={styles.ctaTitle}>Créons Ensemble</h2>
           <p className={styles.ctaDesc}>
             Vous avez un projet ? Discutons de vos besoins et donnons vie à vos idées les plus créatives.

@@ -20,6 +20,7 @@ export default function CollaborationsSection() {
                 <Image src="/images/partners/lamamounia.png" alt="La Mamounia" width={160} height={160} />
                 <Image src="/images/partners/fourseasons.png" alt="Four Seasons" width={160} height={130} />
                 <Image src="/images/partners/theoberoi.jpg" alt="The Oberoi" width={160} height={160} />
+                <Image src="/images/partners/hivernage.png" alt="Hivernage" width={160} height={160} />
             </div>
         </div>
     </section>

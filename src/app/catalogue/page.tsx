@@ -44,6 +44,10 @@ export default function CataloguePage() {
     setActiveFilter(value);
   };
 
+  const filteredProducts = activeFilter === 'all' 
+    ? products 
+    : products.filter(prod => prod.category === activeFilter);
+
   return (
     <>
       <Header />
@@ -82,12 +86,21 @@ export default function CataloguePage() {
       </section>
 
       <section className={styles.productsGrid} id="produits">
-        <div className={styles.grid}>
-          {products.map((prod) => (
-            <ProductCard key={prod.id} {...prod} />
-          ))}
-        </div>
+        {filteredProducts.length === 0 ? (
+          <p className={styles.noProductsMessage}>
+            Oups, aucune création disponible pour cette catégorie… mais nos artisans préparent déjà la prochaine merveille.
+          </p>
+        ) : (
+          <div className={styles.grid}>
+            {filteredProducts.map((prod) => (
+              <ProductCard key={prod.id} {...prod} />
+            ))}
+          </div>
+        )}
       </section>
+
+
+
 
       <Footer />
     </>

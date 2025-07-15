@@ -119,11 +119,28 @@
 }
 
 .productsGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
-  padding: 2rem 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
   justify-items: start;
+}
+
+.noProductsMessage {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--gray-600);
+  text-align: center;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.4;
 }

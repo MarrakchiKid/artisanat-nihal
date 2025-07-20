@@ -11,7 +11,7 @@ const playfair = Playfair_Display({
 
 
 export const metadata: Metadata = {
-  title: "Artisanat Nihal",
+  title: "Artisan Nihal",
   description: "Découvrez des créations artisanales uniques, façonnées avec passion et savoir-faire.",
 };
 

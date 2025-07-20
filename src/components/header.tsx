@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navcontainer}>
-        <a href="/" className={styles.logo} id="logo-text">Artisanat Nihal</a>
+        <a href="/" className={styles.logo} id="logo-text">Artisan Nihal</a>
 
         <button
           className={styles.menuToggle}
